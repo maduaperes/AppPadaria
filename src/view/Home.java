@@ -11,36 +11,25 @@ import static javafx.application.Application.launch;
 
 public class Home extends Application {
     public void start(Stage janela) throws Exception {
-
-        Sidebar menu = new Sidebar();
-
-
+        Sidebar menuLateral = new Sidebar();
 
         Image imgIconStarbucks = new Image(getClass().getResourceAsStream("/view/img/starsbucks-48px.png"));
-        Image imgBackgroud = new Image(getClass().getResourceAsStream("/view/img/background.jpg"));
-
+        Image imgBackground = new Image(getClass().getResourceAsStream("/view/img/background.jpg"));
 
         BorderPane layoutPrincipal = new BorderPane();
-        layoutPrincipal.setLeft(menu);
-        layoutPrincipal.setStyle("-fx-background-image: url('/view/img/background.jpg')");
+        layoutPrincipal.setLeft(menuLateral);
+        menuLateral.setStyle("-fx-background-color: white; -fx-padding: 30px");
+        layoutPrincipal.setStyle("-fx-background-image: url('/view/img/background.jpg');");
 
-
-
-        Scene scene = new Scene(layoutPrincipal, 1024, 700);
-
-
-
-        janela.setTitle("Starbucks");
-
-        janela.getIcons().add(imgIconStarbucks);
-
+        Scene scene = new Scene(layoutPrincipal,1024,700);
         janela.setScene(scene);
-
+        janela.setTitle("Starbucks");
+        janela.getIcons().add(imgIconStarbucks);
         janela.show();
 
     }
-    public static void main(String[] Lifecycle) {
-    launch(Lifecycle);
-    }
 
+    public static void main(String[] args) {
+        launch(args);
+    }
 }
