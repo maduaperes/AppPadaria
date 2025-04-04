@@ -13,13 +13,13 @@ public class Home extends Application {
     public void start(Stage janela) throws Exception {
         Sidebar menuLateral = new Sidebar();
 
-        Image imgIconStarbucks = new Image(getClass().getResourceAsStream("/view/img/starsbucks-48px.png"));
-        Image imgBackground = new Image(getClass().getResourceAsStream("/view/img/background.jpg"));
+        Image imgIconStarbucks = new Image(getClass().getResourceAsStream("/view/resources/img/starsbucks-48px.png"));
+        Image imgBackground = new Image(getClass().getResourceAsStream("/view/resources/img/backgroundS.png"));
 
         BorderPane layoutPrincipal = new BorderPane();
         layoutPrincipal.setLeft(menuLateral);
         menuLateral.setStyle("-fx-background-color: white; -fx-padding: 30px");
-        layoutPrincipal.setStyle("-fx-background-image: url('/view/img/background.jpg');");
+        layoutPrincipal.setStyle("-fx-background-image: url('/view/resources/img/backgroundS.png');");
 
         Scene scene = new Scene(layoutPrincipal,1024,700);
         janela.setScene(scene);
