@@ -13,7 +13,7 @@ public class Home extends Application {
     public void start(Stage janela) throws Exception {
         Sidebar menuLateral = new Sidebar();
 
-        Image imgIconStarbucks = new Image(getClass().getResourceAsStream("/view/resources/img/starsbucks-48px.png"));
+        Image imgIconStarbucks = new Image(getClass().getResourceAsStream("/view/resources/img/starbucks-48px.png"));
         Image imgBackground = new Image(getClass().getResourceAsStream("/view/resources/img/backgroundS.png"));
 
         BorderPane layoutPrincipal = new BorderPane();
